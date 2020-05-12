@@ -64,5 +64,8 @@ define(["require", "exports"], function (require, exports) {
         };
         return Image;
     }());
+    var mm = {
+        state: '',
+    };
     exports.default = {}; //在文件尾export就没有问题，为了避免js文件同时加载的情况，typescript会禁止用相同变量名，除非将文件作为可导入的包
 });

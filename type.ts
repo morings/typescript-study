@@ -6,7 +6,9 @@ namespace A{
   let d:number[]=[1]
   let e:Array<number>=[1]
   let f:[number,string]=[1,'1']
-  enum j{success=1,error=2}
+ 
+  enum j{success='success'+'fail',error=10}
+  enum j {fail}
   console.log(j)
   let h:null = null
   let m:undefined = undefined
