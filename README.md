@@ -38,6 +38,34 @@ enum StrEnum1 {
 ```
 void：表示函数没有返回值,
 object:声明js中的复杂类型
+**ts中的函数**
+  参数定义
+  函数重载
+```
+//参数定义
+let f = function(name:string, age?:number) :void{
+
+}
+```
+函数重载
+```
+//函数重载
+function getInfo(name:string):string;
+function getInfo(age:number):string;
+ 
+//下面是getInfo函数的实现
+function getInfo(s:any):any{
+    if(typeof s==='string'){
+        return '我叫:'+s;
+    }else{
+        return '我的年龄是'+s;
+    }
+}
+ 
+ console.log(getInfo('张三'));   //正确
+ console.log(getInfo(20));   //正确
+```
+
 **ts中的类**
 加入了protect,private,public声明，默认是public
 加入了abstract概念，抽象类不能被实例化，抽象方法只能声明在抽象类中，且实现时不能实现，必须在继承类中实现
